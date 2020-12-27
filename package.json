@@ -11,7 +11,9 @@
   "dependencies": {
     "@prisma/client": "^2.13.1",
     "apollo-server": "^2.19.1",
+    "apollo-server-express": "^2.19.1",
     "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
     "graphql": "^15.4.0",
     "pg": "^8.5.1",
     "react-router-dom": "^5.2.0"
