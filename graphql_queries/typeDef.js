@@ -23,7 +23,7 @@ module.exports = gql`
   }
 
   type Mutation {
-    register(userData: userData): User!
+    register(userData: userData!): User!
     login(username: String!, password: String!): User!
     uploadFile(file: Upload!): Boolean
   }

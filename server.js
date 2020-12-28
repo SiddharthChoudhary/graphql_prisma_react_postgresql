@@ -13,7 +13,7 @@ const server = new ApolloServer({
   formatError: (err) => {
     // Don't give the specific errors to the client.
     if (err.message.startsWith("errors is not defined")) {
-      return new Error('Password mismatch');
+      return new Error('Something is wrong with the username or credential');
     }
     // Otherwise return the original error.  The error can also
     // be manipulated in other ways, so long as it's returned.
