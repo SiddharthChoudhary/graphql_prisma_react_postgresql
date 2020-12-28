@@ -23,6 +23,6 @@ const server = new ApolloServer({
   context: ({ req }) => ({ req, pubsub }),
 });
 
-server.listen({host:'0.0.0.0',port:PORT}).then(({url})=>{
+server.listen(PORT,'0.0.0.0').then(({url})=>{
     console.log(`Server running at ${url}`);
 });
