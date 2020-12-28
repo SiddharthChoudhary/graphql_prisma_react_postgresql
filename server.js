@@ -5,7 +5,8 @@ const resolvers = require('./graphql_queries/resolver');
 
 const pubsub = new PubSub();
 
-const PORT = process.env.port || 3000;
+const PORT = process.env.port || 4000;
+
 
 const server = new ApolloServer({
   typeDefs,
@@ -22,6 +23,6 @@ const server = new ApolloServer({
   context: ({ req }) => ({ req, pubsub }),
 });
 
-server.listen().then(({url})=>{
+server.listen({host:'0.0.0.0',port:PORT}).then(({url})=>{
     console.log(`Server running at ${url}`);
 });
